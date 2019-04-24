@@ -57,6 +57,7 @@ export default {
   ** Build configuration
   */
   build: {
+    analyze: true,
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
     loaders: {
