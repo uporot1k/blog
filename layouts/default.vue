@@ -8,12 +8,14 @@
     >
     
           <v-toolbar-items>
-            <v-btn flat v-for="item in links" :key="item.link" nuxt :href="item.link">{{item.title}}</v-btn>
+            <v-btn flat v-for="item in links" :key="item.link" :to='item.link' nuxt>
+              {{item.title}}
+            </v-btn>
           </v-toolbar-items>
   
     </v-toolbar>
     <v-content>
-      <v-container>
+      <v-container fluid class='pa-0'>
         <nuxt />
       </v-container>
     </v-content>
@@ -45,6 +47,7 @@
 export default {
   data() {
     return {
+      active:'test',
       clipped: false,
       drawer: false,
       fixed: false,
